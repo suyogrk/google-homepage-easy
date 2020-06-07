@@ -6,6 +6,7 @@
 
 html,body{
     height: 100%;
+    font-size:14px;
 }
 
 body {
@@ -38,8 +39,12 @@ align-items: center;
     text-align: center;
     align-content: center;
     line-height: 30px;
-    
+      
 
+}
+
+.ggl-nav-item:hover{
+    text-decoration: underline;
 }
 
 .ggl-nav-item svg{
@@ -64,8 +69,66 @@ outline: none;
 }
 main {
     grid-area:main;
-    justify-content: space-between;
+    justify-self: center;
+    align-self:start;
+    margin-top: 100px;  
+    
+    }
+.ggl-main-container {
+    width:500px;
+    display:grid;
+    grid-gap:10px;
+    grid: 'logo logo' max-content
+    'input input' 50px
+    'search-btn lucky-btn' 60px
+    'language language' 40px;
+}
+.ggl-logo{
+    grid-area: logo;
+    padding-bottom: 30px;
+    justify-self: center;
+}
 
+.ggl-input{
+    grid-area:input;
+    border: 1px solid #dfe1e5 ;
+    border-radius: 25px;
+}
+.ggl-input:hover{
+  box-shadow: 0 2px #f2f2f2;
+  border: 3px solid #dfe1e5;
+}
+.ggl-input input{
+    border: none;
+    outline:none;
+}
+.ggl-search-button{
+    grid-area:search-btn;
+    justify-self: end;
+}
+
+.ggl-lucky-button{
+    grid-area:lucky-btn;
+    justify-self: start;
+}
+
+.ggl-lucky-button button, .ggl-search-button button {
+    line-height: 30px;
+    outline: none;
+    border:none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    min-width: 150px;
+    border-radius: 9px;
+    color:rgba(0,0,0,0.87);
+}
+.ggl-language {
+    grid-area:language;
+    justify-self: center;
+}
+#ggl-logo-image{
+    height: 92px;
+    width: 300px;
 }
 
 footer{
@@ -104,4 +167,9 @@ footer{
 .ggl-footer-link-item{
     padding-left: 25px;
     text-align:center;
+
+}
+
+.ggl-footer-link-item:hover{
+    text-decoration: underline;
 }
