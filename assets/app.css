@@ -93,14 +93,36 @@ main {
     grid-area:input;
     border: 1px solid #dfe1e5 ;
     border-radius: 25px;
+    display:grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-content: center;
+    gap:10px;
 }
+
+.ggl-input svg{
+    fill: rgba(0,0,0,0.87);
+    height: 15px;
+
+}
+
+.input-before{
+    justify-self: end;
+    align-self: center;
+}
+.input-after{
+    justify-self: start;
+    align-self: center;
+}
+
 .ggl-input:hover{
   box-shadow: 0 2px #f2f2f2;
   border: 3px solid #dfe1e5;
 }
-.ggl-input input{
+.ggl-input input[type="text"]{
     border: none;
     outline:none;
+    height: 100%;
+    
 }
 .ggl-search-button{
     grid-area:search-btn;
@@ -119,12 +141,25 @@ main {
     padding: 5px 10px;
     margin: 0 5px;
     min-width: 150px;
-    border-radius: 9px;
+    border-radius: 4px;
     color:rgba(0,0,0,0.87);
 }
+
+.ggl-lucky-button button:hover, .ggl-search-button button:hover {
+ box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+ border: 1px solid #c6c6c6;
+ border-radius: 2px inset #dfe1e5;
+}
+
 .ggl-language {
     grid-area:language;
     justify-self: center;
+}
+.ggl-language a{
+    text-decoration:none;
+}
+.ggl-language a:hover{
+    text-decoration:underline;
 }
 #ggl-logo-image{
     height: 92px;
